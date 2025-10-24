@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Image & Location</title>
+  <link rel="stylesheet" href="imageupload.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Upload Your Image anonymously & Share Location of incident</h1>
+
+    <!-- Image Upload -->
+    <div class="upload-box">
+      <label for="imageUpload" class="upload-label">Choose an image</label>
+      <input type="file" id="imageUpload" accept="image/*" />
+      <img id="preview" src="" alt="Preview" />
+    </div>
+
+    <!-- Location Section -->
+    <div class="location-box">
+      <button id="getLocation">Get My Location</button>
+      <p id="location">Your location will appear here...</p>
+    </div>
+    <a href="reports.html">proceed to review posts anonymously </a>
+  </div>
+
+  <script>
+    // Image preview logic
+    const imageUpload = document.getElementById("imageUpload");
+    const preview = document.getElementById("preview");
+
+    imageUpload.addEventListener("change", () => {
+      const file = imageUpload.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          preview.src = e.target.result;
+          preview.style.display = "block";
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Geolocation logic
+    const getLocationBtn = document.getElementById("getLocation");
+    const locationText = document.getElementById("location");
+
+    getLocationBtn.addEventListener("click", () => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (pos) => {
+            const lat = pos.coords.latitude.toFixed(5);
+            const lon = pos.coords.longitude.toFixed(5);
+            locationText.textContent = Latitude: ${lat}, Longitude: ${lon};
+          },
+          (err) => {
+            locationText.textContent = "Error getting location: " + err.message;
+          }
+        );
+      } else {
+        locationText.textContent = "Geolocation is not supported by your browser.";
+      }
+    });
+  </script>
+</body>
+</html>

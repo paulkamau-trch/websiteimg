@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+            html, body{
+            height: 100%;
+            margin: 0;
+            font-family: sans-serif;
+            color: rgb(000,000,000);}
+            body{
+                background: color(#ddddff red green blue);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+        }
+        .card{
+            width: 360px;              
+            background: rgba(100,100,, 0.1);
+            border-radius: 18px ;
+            padding: 40px 30px  ;
+            text-align: center;
+            backdrop-filter: blur(4px);
+        }
+        .input-group{
+            margin-bottom: 20px;
+        }
+        .input-group input{
+            width: 100%;
+            padding: 12px 4px ;
+            border: none;
+            border-radius: 10px ;
+            background:rgba(2, 255, 255, 0.1) ;
+            color: #000000 ;
+            font-size: 15px;
+            outline: ; 
+
+        }
+        .options{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom:20px ;
+
+        }
+        .button{
+            align-items: center;
+            width: 100%;
+            border-radius: 25px;
+            background: linear-gradient(90deg , #00ffff , #ff00ff) ;
+            padding: 12px;
+            border: #ff00ff;
+        }
+        a{
+            text-decoration: none;
+            color: blue;
+        }
+
+        h1{
+            margin-bottom: 25px;
+            font-size: 20px;
+        }
+        
+
+        
+    </style>
+</head>
+<body>    
+    <div class="card">
+        <h1>Register</h1>
+    <form id="loginform"> 
+
+        <div class="input-group">
+            <input type="email" placeholder="name@gmail.com" name="" required>
+        </div>
+         
+        <div class="input-group">
+            <input type="text" placeholder="username" name="" required>
+        </div> 
+          <div class="input-group">
+            <input type="text" placeholder="your location" name="" required>
+        </div>
+        <div class="input-group" >
+            <input type="number" placeholder ="phone number">
+        </div>
+       
+        <div class="input-group">
+        <input type="password" placeholder="enter password" name="" required>
+       </div> 
+        <div class="input-group">
+        <input type="password" placeholder="confirm password" name="" required>
+       </div>
+        
+     
+        
+        <button type="submit" class="button">sign up</button>
+        <p>Don't have an account?</p> <a href="reports.html"> register</a>
+    </div>
+    </form>
+</body>
+</html>

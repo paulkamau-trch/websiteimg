@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <style>
+        html, body{
+            height: 100%;
+            margin: 0;
+            font-family: sans-serif;
+            color: rgb(255,255,255);}
+            body{
+               
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+        }
+        .card{
+            width: 360px;              
+            background: #000000;
+            border-radius: 18px ;
+            padding: 40px 30px  ;
+            text-align: center;
+            backdrop-filter: blur(4px);
+        }
+        .input-group{
+            margin-bottom: 20px;
+        }
+        .input-group input{
+            width: 100%;
+            padding: 12px 4px ;
+            border: none;
+            border-radius: 1px ;
+            background:rgba(2, 255, 255, 0.19) ;
+            color: #6a80f7 ;
+            font-size: 15px;
+            outline: ; 
+
+        }
+        .options{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom:20px ;
+
+        }
+        .button{
+            align-items: center;
+            width: 100%;
+            border-radius: 25px;
+            background: linear-gradient(90deg , #ff2222 , #ffffff  , #00ff22) ;
+            padding: 12px;
+            border: #ff00ff;
+        }
+        a{
+            text-decoration: none;
+            color: blue;
+        }
+
+        h1{
+            margin-bottom: 25px;
+            font-size: 20px;
+        }
+
+        .input-group input::placeholder{
+            color: rgb(255, 255, 255);
+        }
+        
+
+        
+    </style>
+</head>
+<body>    
+    <div class="card">
+        <h1>proceed anonymously</h1>
+    <form id="loginform"> 
+      <div class="input-group">
+            <input type="text" placeholder="write down the problem you witnessed" name="" required>
+        </div> 
+         <div class="input-group">
+            <input type="text" placeholder="where did you encounter the problem" name="" required>
+        </div>
+        <button id="getlocation">get location</button>
+
+        <script>
+            var getlocation
+        </script>
+
+
+
+         <div class="input-group">
+            <input type="text" placeholder="user name" name="" required>
+        </div>
+        <div class="input-group">            
+            <input type="password" name="password" placeholder="password" required>
+        </div> 
+         <div class="input-group">            
+            <input type="password" name="password" placeholder="confirm password" required>
+        </div>
+       
+         <div class="input-group">
+            <input type="file">
+        </div>
+ 
+        <div class="input-group">   
+    
+        <input type="checkbox" name="remember"> register <br>
+             <a href="login.html">already have an account</a>
+            
+            </div>
+    
+       
+        <button type="submit" class="button">REGISTER</button>
+        <p>welcome to paulsait</p> 
+        </div>
+    </div>
+    </form>
+</body>
+</html>
